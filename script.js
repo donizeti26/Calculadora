@@ -1,10 +1,7 @@
-let numero =[]
-
-
 
 function insert(num){
     let visor = document.querySelector('#visor-content')        
-    visor.innerHTML+=` ${num}`
+    visor.innerHTML+=`${num}`
 }
 function limpar(){
     let visor = document.querySelector('#visor-content')        
@@ -22,12 +19,17 @@ function delet(){
 
 
 }
+
+function formatarValor(valor) {
+    return valor.toLocaleString('pt-BR');
+}
+
 function calcular(){
     let visor = document.querySelector('#visor-content')
 
     if(visor){
         let calculo = visor.innerText
-        visor.innerHTML = eval(calculo)
+        visor.innerHTML = formatarValor(eval(calculo))
     }else{
         visor.innerHTML = 'informe um n º'
 
