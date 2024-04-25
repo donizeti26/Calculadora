@@ -1,4 +1,6 @@
 
+
+
 function insert(num){
     let visor = document.querySelector('#visor-content')        
     visor.innerHTML+=`${num}`
@@ -25,8 +27,9 @@ function formatarValor(valor) {
 }
 
 function calcular(){
-    let visor = document.querySelector('#visor-content')
 
+    let visor = document.querySelector('#visor-content')
+visor.innerHTML= visor.innerHTML.replace(',','.')
     if(visor){
         let calculo = visor.innerText
         visor.innerHTML = formatarValor(eval(calculo))
