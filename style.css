@@ -10,14 +10,21 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    background-color: #9F9F9F;
 }
 #content{
 
     background-color:#000000 ;
     color:#F9F9F9 ;
     font-size: 40pt;
-
+    box-shadow: #2b2b2b 10px 10px 50px;
 }
+
+#visor{
+    width: 100%;
+    background-color: #F9F9F9;
+}
+
 
 .num{
     background-color: #313131;
@@ -53,9 +60,39 @@
       "numbers numbers operators-two";
       width: 413px;
       padding: 20px;
+      border-radius: 37px;
 }
 
-.visor { grid-area: visor; }
+#visor { grid-area: visor;
+background-color: transparent; }
+
+#visor-content{
+    width: 100%;
+    height: 90%;
+    font-size: 40pt;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: end;
+    background-color: #F9F9F9;
+    color: #2b2b2b;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#visor-content{
+    font: normal 30pt 'Arial';
+    color: #2b2b2b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#delet{
+    background-image: url(delet.svg);
+    background-repeat: no-repeat;
+    background-size: 65px;
+    background-position: center;
+}
 
 #numbers {
     grid-area: numbers;
@@ -77,6 +114,7 @@ justify-content: space-evenly;
 }
 
 #numbers fieldset{
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,4 +125,26 @@ justify-content: space-evenly;
 #zero{
     width: 160px;
     height: 70px;
+    border-radius: 30px;
+    text-align: center;
 }
+
+
+.num:hover{
+    border: 5px solid rgb(61, 61, 61,1);
+}
+.opt_one:hover{
+    border: 5px solid rgb(145, 145, 145,1);
+}
+.opt_two:hover{
+    border: 5px solid rgb(255, 164, 36);
+}
+
+
+@media (max-width:700px) {
+    #content{
+        width: 364px;
+        padding: 8px;
+    }
+}
+

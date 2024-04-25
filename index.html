@@ -13,44 +13,46 @@
     <div id="calculater">
 
         <div id="content">
-            <div id="visor">
-
+            <div id="visor" >
+                <section type="text" name="" id="visor-content"></section>
             </div>
             <div id="operators-one">
-                <input type="button" name="nove" class="opt_one" id="limpar" value="C">
-                <input type="button" name="nove" class="opt_one" id="delet" value="D">
-                <input type="button" name="nove" class="opt_one" id="pct" value="%">
+                <input type="button" name="nove" class="opt_one"  onclick="limpar()" id="limpar" value="C">
+                <input type="button" name="nove" class="opt_one"  onclick="delet()" id="delet" value="">
+                <input type="button" name="nove" class="opt_one" onclick="porct()"  id="pct" value="%">
 
             </div>
             <div id="numbers">
                 <fieldset>
-                    <input type="button" class="num" name="number" id="nove" value="9">
-                    <input type="button" class="num" name="number" id="oito" value="8">
-                    <input type="button" class="num" name="number" id="sete" value="7">
-                    <input type="button" class="num" name="number" id="seis" value="6">
-                    <input type="button" class="num" name="number" id="cinco" value="5">
-                    <input type="button" class="num" name="number" id="quatro" value="4">
-                    <input type="button" class="num" name="number" id="tres" value="3">
-                    <input type="button" class="num" name="number" id="dois " value="2">
-                    <input type="button" class="num" name="number" id="um" value="1">
-                    <input type="button" class="num" name="number" id="zero" value="0">
-                    <input type="button" class="num" name="number" id="ponto" value=".">
+                    <input type="button" class="num" name="number" onclick="insert('9')" id="nove" value="9">
+                    <input type="button" class="num" name="number" onclick="insert('8')" id="oito" value="8">
+                    <input type="button" class="num" name="number" onclick="insert('7')" id="sete" value="7">
+                    <input type="button" class="num" name="number" onclick="insert('6')" id="seis" value="6">
+                    <input type="button" class="num" name="number" onclick="insert('5')" id="cinco" value="5">
+                    <input type="button" class="num" name="number" onclick="insert('4')" id="quatro" value="4">
+                    <input type="button" class="num" name="number" onclick="insert('3')" id="tres" value="3">
+                    <input type="button" class="num" name="number" onclick="insert('2')" id="dois " value="2">
+                    <input type="button" class="num" name="number" onclick="insert('1')" id="um" value="1">
+                    <input type="button" class="num" name="number" onclick="insert('0')" id="zero" value="0">
+                    <input type="button" class="num" name="number" onclick="insert('.')" id="ponto" value=".">
                     
                     </fieldset>
 
 
             </div>
             <div id="operators-two">
-                <input type="button" class="opt_two"value="/">
-                <input type="button" class="opt_two" value="*">
-                <input type="button" class="opt_two"value="-">
-                <input type="button" class="opt_two" value="+">
-                <input type="button" class="opt_two"value="=">
+                <input type="button" onclick="insert('/')" class="opt_two"value="/">
+                <input type="button" onclick="insert('*')" class="opt_two" value="*">
+                <input type="button" onclick="insert('-')" class="opt_two"value="-">
+                <input type="button" onclick="insert('+')" class="opt_two" value="+">
+                <input type="button" onclick="calcular()" class="opt_two"value="=">
             </div>
         </div>
 
     </div>
 
     <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
