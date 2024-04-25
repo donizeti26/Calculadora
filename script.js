@@ -4,7 +4,7 @@ let numero =[]
 
 function insert(num){
     let visor = document.querySelector('#visor-content')        
-    visor.innerHTML+=`${num}`
+    visor.innerHTML+=` ${num}`
 }
 function limpar(){
     let visor = document.querySelector('#visor-content')        
@@ -14,10 +14,12 @@ function limpar(){
 function porct(num){
     
 }
+
+
 function delet(){
     let visor = document.querySelector('#visor-content')
-    visor.innerHTML = visor.slice(0, -1)
-    
+    visor.innerHTML=visor.innerText.slice(0, -1)
+
 
 }
 function calcular(){
